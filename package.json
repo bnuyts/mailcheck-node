@@ -1,0 +1,64 @@
+{
+  "name": "mailcheck-dev",
+  "version": "1.0.2",
+  "description": "Official Node.js/TypeScript SDK for the MailCheck.dev email verification API. Verify emails, detect disposable addresses, check DNS/SPF/DKIM/DMARC, and bulk verify lists.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "rm -rf dist && npm run build:esm && npm run build:cjs && echo '{\"type\":\"module\"}' > dist/esm/package.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "test": "node --experimental-vm-modules test/index.test.mjs"
+  },
+  "keywords": [
+    "email",
+    "verification",
+    "validate",
+    "mailcheck",
+    "disposable",
+    "email-validation",
+    "email-verification",
+    "bulk-verify",
+    "spf",
+    "dkim",
+    "dmarc",
+    "mx",
+    "dns",
+    "api",
+    "sdk"
+  ],
+  "author": "MailCheck.dev",
+  "license": "MIT",
+  "homepage": "https://mailcheck.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bnuyts/mailcheck-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bnuyts/mailcheck-node/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
