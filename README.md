@@ -65,7 +65,7 @@ const job = await mc.bulk.verify(
   { webhookUrl: 'https://yoursite.com/webhook' }
 );
 console.log(job.job_id);       // "job_abc123"
-console.log(job.total_emails); // 2
+console.log(job.total);        // 2
 ```
 
 ### `mc.verifyAuth(options): Promise<VerifyAuthResult>`

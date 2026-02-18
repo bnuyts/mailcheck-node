@@ -26,6 +26,7 @@ export interface VerifyResult {
     mxHost?: string;
     isDisposable?: boolean;
     catchAll?: boolean | null;
+    catch_all?: boolean | null;
     smtpError?: string;
     is_role?: boolean;
     role?: string;
@@ -35,6 +36,7 @@ export interface VerifyResult {
     has_typo_suggestion?: boolean;
     typo_suggestion?: string;
     risk_level?: 'low' | 'medium' | 'high';
+    is_catch_all?: boolean;
   };
   cached: boolean;
   credits_remaining: number;

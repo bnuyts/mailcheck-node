@@ -37,7 +37,7 @@ describe('SDK Type Compilation', () => {
       details: {
         mxHost: 'mx.example.com',
         risk_level: 'low',
-        catch_all: false,
+        catchAll: false,
         is_role: false,
         is_free_provider: false,
         is_disposable: false,
@@ -67,7 +67,7 @@ describe('SDK Type Compilation', () => {
       },
       details: {
         risk_level: 'low',
-        catch_all: false,
+        catchAll: false,
         is_role: false,
         is_free_provider: false,
         is_disposable: false,

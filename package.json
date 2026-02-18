@@ -1,6 +1,6 @@
 {
   "name": "mailcheck-dev",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Official Node.js/TypeScript SDK for the MailCheck.dev email verification API. Verify emails, detect disposable addresses, check DNS/SPF/DKIM/DMARC, and bulk verify lists.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
